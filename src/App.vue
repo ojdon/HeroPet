@@ -19,10 +19,6 @@ export default {
   src: url(./assets/fonts/m6x11.ttf) format('truetype');
 }
 body {
-  font-size:1rem;
-  padding: 0;
-  margin: 0;
-
   background: #44AAFF;
 }
 h1 {
@@ -56,7 +52,6 @@ color: #FEFEFE;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
   height: 100vh;
 }
 </style>
