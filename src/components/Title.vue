@@ -5,8 +5,8 @@
 
      <b-row>
       <b-col cols="4" offset="4">
-        <b-button variant="secondary" size="lg" block="true" to="/game">New Game</b-button>
-        <b-button variant="secondary" size="lg" block="true" href="">Exit Game</b-button>
+        <b-button class="btn btn-ui" block=true size="lg" to="/game">New Game</b-button>
+        <b-button class="btn btn-ui" block=true size="lg" href="">Exit Game</b-button>
       </b-col>
     </b-row>
 

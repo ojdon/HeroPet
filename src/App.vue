@@ -14,12 +14,20 @@ export default {
 
 <style>
 
+.btn-ui {
+  background-image: url('./assets/img/ui/buttonLong_brown.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
 @font-face {
   font-family: m6x11;
   src: url(./assets/fonts/m6x11.ttf) format('truetype');
 }
 body {
   background: #44AAFF;
+  image-rendering: pixelated;
 }
 h1 {
 
