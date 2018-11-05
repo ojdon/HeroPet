@@ -23,6 +23,10 @@ export default {
     return {
       msg: 'Title Screen'
     }
+  },
+  mounted() {
+    
+    
   }
 }
 </script>

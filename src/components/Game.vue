@@ -5,12 +5,17 @@
 </template>
 
 <script>
+
+import Player from '../classes/Player'
 export default {
   name: 'Game',
   data () {
     return {
       msg: 'Game Screen'
     }
+  },
+  mounted() {
+  	var player = new Player(100, 100, 100);
   }
 }
 </script>
