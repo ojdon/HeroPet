@@ -28,6 +28,7 @@ export default {
 body {
   background: #44AAFF;
   image-rendering: pixelated;
+  overflow-y: hidden;
 }
 h1 {
 
