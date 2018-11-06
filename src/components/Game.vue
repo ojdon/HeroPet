@@ -10,6 +10,14 @@
       </b-row>
       </b-container>
   	</header>
+
+    <footer class="position-absolute">
+        <b-btn class="text-center mx-auto" v-b-modal.menu>Menu</b-btn>
+    </footer>
+
+    <b-modal id="menu" centered hide-footer=true title="Menu">
+    <p class="my-4">TODO: Menu items go here!</p>
+  </b-modal>
   
   </div>
 </template>
@@ -122,6 +130,11 @@ header .hunger::after {
   height: 18px;
   position:absolute;
 }
-
+footer {
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  z-index:1;
+}
 
 </style>
