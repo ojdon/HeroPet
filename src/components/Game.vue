@@ -12,11 +12,51 @@
   	</header>
 
     <footer class="position-absolute">
-        <b-btn class="text-center mx-auto" v-b-modal.menu>Menu</b-btn>
+        <b-btn class="text-center mx-auto" size="lg" v-b-modal.menu>Menu</b-btn>
     </footer>
 
-    <b-modal id="menu" centered hide-footer=true title="Menu">
-    <p class="my-4">TODO: Menu items go here!</p>
+
+    <!-- TODO: PUT THIS IN A SEPERATE COMPONENT !-->
+    <b-modal id="menu" centered hide-footer=true size="lg" title="Menu">
+    <b-container>
+      <b-row>
+        <b-col>
+          <b-btn size="lg" block=true>
+          Quest
+        </b-btn>
+        </b-col>
+
+        <b-col>
+          <b-btn size="lg" block=true>
+            Train
+          </b-btn>
+        </b-col>
+
+        <b-col>
+          <b-btn size="lg" block=true>
+            Status
+          </b-btn>
+        </b-col>
+      </b-row>
+      <br>
+      <b-row>
+        <b-col>
+          <b-btn size="lg" block=true>
+          Heal
+        </b-btn>
+        </b-col>
+        <b-col>
+          <b-btn size="lg" block=true>
+          Potion
+        </b-btn>
+        </b-col>
+        <b-col>
+          <b-btn size="lg" block=true>
+          Eat
+        </b-btn>
+        </b-col>
+      </b-row>
+    </b-container>
   </b-modal>
   
   </div>
