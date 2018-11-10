@@ -67,7 +67,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', end
 
 .bg {
   background-size: cover;
-  background-attachment: fixed;
 }
 .bg-fields {
   background-image: url(./assets/img/bg/fields.png) !important;

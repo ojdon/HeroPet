@@ -5,8 +5,9 @@
 
      <b-row>
       <b-col cols="4" offset="4" class="my-5">
-        <b-button class="btn btn-ui" block=true size="lg" to="/game">New Game</b-button>
-        <b-button class="btn btn-ui" block=true size="lg" href="">Exit Game</b-button>
+        <p>Background art: sparklinlabs</p>
+        <p>Character art: Calciumtrice</p>
+        <p>Enemy art: sparklinlabs</p>
       </b-col>
     </b-row>
 

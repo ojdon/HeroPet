@@ -5,11 +5,13 @@
   		<b-container fluid>
         <b-row>
         <b-col><p class="text-center mb-0">Health: 100/100</p><span class="health" style="width: 100%;"></span></b-col>
-        <b-col><p class="text-center mb-0">Magic: 100/100</p><span class="magic" style="width: 100%;"></span></b-col>
+        <b-col><p class="text-center mb-0">Energy: 100/100</p><span class="energy" style="width: 100%;"></span></b-col>
         <b-col><p class="text-center mb-0">Hunger: 100/100</p><span class="hunger" style="width: 100%;"></span></b-col>
       </b-row>
       </b-container>
   	</header>
+
+    <Player></Player>
 
     <footer class="position-absolute">
         <b-btn class="text-center mx-auto" size="lg" v-b-modal.menu>Menu</b-btn>
@@ -24,16 +26,15 @@
 
 <script>
 import Menu from './includes/menu.vue'
-
-import Player from '../classes/Player'
+import Player from './classes/Player.vue'
 export default {
   name: 'Game',
   components: {
-    Menu
+    Menu,
+    Player
   },
   data () {
     return {
-    	player: new Player(100, 100, 100),
       msg: 'Game Screen'
     }
   }
@@ -79,13 +80,13 @@ header .health::after {
   position:absolute;
 }
 
-header .magic {
+header .energy {
 	background: url('../assets/img/ui/barBlue_horizontalBlue.png');
 	display: inline-block;
 	height: 18px;
   margin-bottom: 1px;
 }
-header .magic::before {
+header .energy::before {
   background: url('../assets/img/ui/barBlue_horizontalLeft.png') no-repeat;
   content: '';
   z-index:1;
@@ -96,7 +97,7 @@ header .magic::before {
   position:absolute;
 
 }
-header .magic::after {
+header .energy::after {
   background: url('../assets/img/ui/barBlue_horizontalRight.png') no-repeat;
   content: '';
   z-index:1;
