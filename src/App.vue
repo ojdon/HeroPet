@@ -18,15 +18,11 @@ export default {
       return this.currentTime.getHours();
     },
     setNight: function() {
-
       var bg = document.getElementById('app');
       bg = bg.classList.add("bg-night");
-
     }
   },
   mounted(){
-    console.log(this.checkHours());
-
     if(this.checkHours() >= 20 || this.checkHours() <= 8) {
       this.setNight();
     }
