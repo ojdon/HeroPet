@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    <h1 class="text-center my-0 py-5">HeroPet</h1>
+    <h1 class="text-center my-5 py-5">HeroPet</h1>
     <b-container>
 
      <b-row>
