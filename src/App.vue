@@ -7,7 +7,30 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      currentTime: new Date()
+    }
+  },
+  methods: {
+    checkHours: function() {
+      return this.currentTime.getHours();
+    },
+    setNight: function() {
+
+      var bg = document.getElementById('app');
+      bg = bg.classList.add("bg-night");
+
+    }
+  },
+  mounted(){
+    console.log(this.checkHours());
+
+    if(this.checkHours() >= 20 || this.checkHours() <= 8) {
+      this.setNight();
+    }
+  }
 }
 </script>
 
@@ -71,7 +94,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', end
 .bg-fields {
   background-image: url(./assets/img/bg/fields.png) !important;
 }
-.bg-fields.night{
+.bg-fields.bg-night{
   background-image: url(./assets/img/bg/fields-night.png) !important;
 }
 
