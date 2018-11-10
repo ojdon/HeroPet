@@ -4,9 +4,9 @@
   	<header>
   		<b-container fluid>
         <b-row>
-        <b-col><p class="text-center mb-0">Health: 100/100</p><span class="health" style="width: 100%;"></span></b-col>
-        <b-col><p class="text-center mb-0">Energy: 100/100</p><span class="energy" style="width: 100%;"></span></b-col>
-        <b-col><p class="text-center mb-0">Hunger: 100/100</p><span class="hunger" style="width: 100%;"></span></b-col>
+        <b-col><p class="text-center mb-0">Health: <span class="d-block d-sm-inline">100/100</span></p><span class="health" style="width: 100%;"></span></b-col>
+        <b-col><p class="text-center mb-0">Energy: <span class="d-block d-sm-inline">100/100</span></p><span class="energy" style="width: 100%;"></span></b-col>
+        <b-col><p class="text-center mb-0">Hunger: <span class="d-block d-sm-inline">100/100</span></p><span class="hunger" style="width: 100%;"></span></b-col>
       </b-row>
       </b-container>
   	</header>
@@ -14,7 +14,7 @@
     <Player></Player>
 
     <footer class="position-absolute">
-        <b-btn class="text-center mx-auto" size="lg" v-b-modal.menu>Menu</b-btn>
+        <b-btn class="text-center mx-auto btn-menu" size="lg" v-b-modal.menu>Menu</b-btn>
     </footer>
 
     <Menu></Menu>
@@ -134,6 +134,10 @@ header .hunger::after {
   width: 9px;
   height: 18px;
   position:absolute;
+}
+.btn-menu {
+  background: url(../assets/img/ui/buttonSquare_brown.png) no-repeat;
+  background-size: 100% 100%
 }
 footer {
   bottom: 48px;
