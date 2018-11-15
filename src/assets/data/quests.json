@@ -1,0 +1,33 @@
+{
+  "quests": {
+    "quest": [
+      {
+        "title": "Building a base",
+        "description": "You'll need somewhere to rest after a hard day of being a hero.",
+        "hours": "0",
+        "minutes": "10",
+        "atk": "0",
+        "def": "0",
+        "speed": "0"
+      },
+      {
+        "title": "Exploring the fields",
+        "description": "Let's see what kind of trouble is waiting around the corner...",
+        "hours": "0",
+        "minutes": "30",
+        "atk": "10",
+        "def": "10",
+        "speed": "10"
+      },
+      {
+        "title": "Thieves!",
+        "description": "Someone has stolen your favourite pillow... Time to return it.",
+        "hours": "1",
+        "minutes": "0",
+        "atk": "15",
+        "def": "10",
+        "speed": "10"
+      }
+    ]
+  }
+}

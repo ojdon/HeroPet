@@ -19,6 +19,7 @@
 
     <Menu></Menu>
     
+<MenuQuest></MenuQuest>
   
   
   </div>
@@ -26,11 +27,13 @@
 
 <script>
 import Menu from './includes/menu.vue'
+import MenuQuest from './includes/menu-quest.vue'
 import Player from './classes/Player.vue'
 export default {
   name: 'Game',
   components: {
     Menu,
+    MenuQuest,
     Player
   },
   data () {

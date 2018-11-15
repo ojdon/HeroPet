@@ -1,12 +1,9 @@
 <template>
-  <!-- TODO: PUT THIS IN A SEPERATE COMPONENT !-->
     <b-modal id="menu" centered hide-footer=true size="lg" title="Menu">
     <b-container>
       <b-row>
         <b-col>
-          <b-btn size="lg" block=true>
-          Quest
-        </b-btn>
+          <b-btn class="text-center mx-auto btn-menu" size="lg" block=true v-b-modal.menu-quest>Quests</b-btn>
         </b-col>
 
         <b-col>
