@@ -2,9 +2,9 @@
     <b-modal id="menu-quest" centered hide-footer=true size="lg" title="Quests">
     <b-container>
 
-      <ul>
-        <li v-for="(quest, index) in Quests">
-          Title: {{quest.title}}
+      <ul class="list-unstyled text-left">
+        <li v-for="(quest, index) in quests">
+          Title: {{index}} {{quest.title}}
         </li>
       </ul>
       
@@ -16,8 +16,10 @@
 
   export default {
   name: 'Game',
-  data() {
-    quests: Quests
+  data () {
+    return {
+      quests: Quests
+    }
   },
   mounted() {
     console.log(Quests)
