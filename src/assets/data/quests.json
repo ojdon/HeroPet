@@ -1,6 +1,7 @@
 {
     "quest": [
       {
+        "id": 0,
         "title": "Building a base",
         "description": "You'll need somewhere to rest after a hard day of being a hero.",
         "hours": "0",
@@ -10,6 +11,7 @@
         "speed": "0"
       },
       {
+        "id": 1,
         "title": "Exploring the fields",
         "description": "Let's see what kind of trouble is waiting around the corner...",
         "hours": "0",
@@ -19,6 +21,7 @@
         "speed": "10"
       },
       {
+        "id": 2,
         "title": "Thieves!",
         "description": "Someone has stolen your favourite pillow... Time to return it.",
         "hours": "1",

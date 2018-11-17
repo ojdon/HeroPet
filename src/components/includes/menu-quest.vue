@@ -17,14 +17,13 @@
   import Quests from '../../assets/data/quests.json'
 
   export default {
-  name: 'Game',
+  name: 'Quests',
   data () {
     return {
       questList: Quests
     }
   },
   mounted() {
-    console.log(this.questList)
   }
 }
 </script>
