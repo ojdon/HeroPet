@@ -1,5 +1,4 @@
 {
-  "quests": {
     "quest": [
       {
         "title": "Building a base",
@@ -29,5 +28,4 @@
         "speed": "10"
       }
     ]
-  }
 }
