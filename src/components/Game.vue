@@ -38,19 +38,18 @@ export default {
   },
   data () {
     return {
-      msg: 'Game Screen'
+      msg: 'Game Screen',
+      player: Player
     }
   },
   methods: {
     init: function () {
       localStorage.setItem('save', true);
-
+      
     }
   },
   mounted() {
-
-
-    init();
+    this.init();
   }
 }
 </script>
