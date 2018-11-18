@@ -6,6 +6,8 @@
      <b-row>
       <b-col cols="4" offset="4" class="my-5">
         <b-button class="btn btn-ui" block=true size="lg" to="/game">New Game</b-button>
+
+        <b-button v-show="save" class="btn btn-ui" block=true size="lg" to="/game">Continue Game</b-button>
         <b-button class="btn btn-ui" block=true size="lg" href="">Exit Game</b-button>
       </b-col>
     </b-row>
@@ -21,12 +23,14 @@ export default {
   name: 'Title',
   data () {
     return {
-      msg: 'Title Screen'
+      msg: 'Title Screen',
+      save: false
     }
   },
-  mounted() {
-    
-    
+  mounted() {  
+    if(localStorage.getItem('save')) {
+      this.save = localStorage.getItem('save');
+    }
   }
 }
 </script>

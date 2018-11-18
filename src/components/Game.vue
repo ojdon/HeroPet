@@ -40,6 +40,17 @@ export default {
     return {
       msg: 'Game Screen'
     }
+  },
+  methods: {
+    init: function () {
+      localStorage.setItem('save', true);
+
+    }
+  },
+  mounted() {
+
+
+    init();
   }
 }
 </script>
