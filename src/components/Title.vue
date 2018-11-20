@@ -28,6 +28,7 @@ export default {
     }
   },
   mounted() {  
+    console.log(this.$store);
     if(localStorage.getItem('save')) {
       this.save = localStorage.getItem('save');
     }

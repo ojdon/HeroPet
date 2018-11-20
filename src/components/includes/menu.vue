@@ -3,17 +3,17 @@
     <b-container>
       <b-row>
         <b-col>
-          <b-btn class="text-center mx-auto btn-menu" size="lg" block=true v-b-modal.menu-quest>Quests</b-btn>
+          <b-btn class="text-center mx-auto btn-menu btn-block btn-lg" v-b-modal.menu-quest>Quests</b-btn>
         </b-col>
 
         <b-col>
-          <b-btn size="lg" block=true>
+          <b-btn class="btn-block btn-lg">
             Training
           </b-btn>
         </b-col>
 
         <b-col>
-          <b-btn size="lg" block=true>
+          <b-btn class="btn-block btn-lg">
             Status
           </b-btn>
         </b-col>
@@ -21,17 +21,17 @@
       <br>
       <b-row>
         <b-col>
-          <b-btn size="lg" block=true>
+          <b-btn class="btn-block btn-lg">
           Heal
         </b-btn>
         </b-col>
         <b-col>
-          <b-btn size="lg" block=true>
-          Potion
+          <b-btn class="btn-block btn-lg">
+          Sleep
         </b-btn>
         </b-col>
         <b-col>
-          <b-btn size="lg" block=true>
+          <b-btn class="btn-block btn-lg">
           Eat
         </b-btn>
         </b-col>

@@ -45,7 +45,6 @@ export default {
   methods: {
     init: function () {
       localStorage.setItem('save', true);
-      
     }
   },
   mounted() {

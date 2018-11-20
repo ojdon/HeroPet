@@ -1,5 +1,5 @@
 {
-    "hero": [
+    "hero": 
       {
         "name": "Hero",
         "atk": 5,
@@ -9,11 +9,6 @@
         "energy": 100,
         "hunger": 100
       }
-    ],
-    "completed": [
-      {
-        //0:id
-        //0:0
-      }
-    ]
+    
+
 }
