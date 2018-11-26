@@ -13,6 +13,10 @@
     </b-row>
 
   </b-container>
+
+  <audio  autoplay loop>
+    <source src="../assets/snd/music/title.mp3" type="audio/mp3">
+  </audio>
   
   
 </div>
@@ -28,7 +32,8 @@ export default {
     }
   },
   mounted() {  
-    console.log(this.$store);
+
+
     if(localStorage.getItem('save')) {
       this.save = localStorage.getItem('save');
     }
@@ -38,6 +43,50 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  animation: aniTitle 3s infinite;
+  transform: translateY(0)
+}
+
+@keyframes aniTitle {
+  0% {
+    transform: translateY(0px)
+  }
+  24% {
+    transform: translateY(0px)
+  }
+  25% {
+    transform: translateY(1px)
+  }
+  26% {
+    transform: translateY(2px)
+  }
+  49% {
+    transform: translateY(2px)
+  }
+  50% {
+    transform: translateY(1px)
+  }
+  51% {
+    transform: translateY(1px)
+  }
+  
+  74% {
+    transform: translateY(1px)
+  }
+  75% {
+    transform: translateY(0)
+  }
+  76% {
+    transform: translateY(-1px)
+  }
+  99% {
+    transform: translateY(-2px)
+  }
+  100% {
+    transform: translateY(0px)
+  }
+}
 .menu-title a {
   font-size: 48px;
   text-decoration: none;

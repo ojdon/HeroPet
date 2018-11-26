@@ -5,8 +5,8 @@
       <table class="table">
         <tbody> 
           <tr v-for="quest in this.questList.quest">
-            <td class="text-left" style="vertical-align: middle"><h5 class="text-uppercase">{{quest.title}}</h5> {{quest.description}}</td>
-            <td class="w-25" style="vertical-align: middle"><a href="#" class="btn btn-primary btn-block">Go</a></td>
+            <td class="text-left" style="vertical-align: middle"><h5 class="text-uppercase">{{quest.title}}</h5> {{quest.description}}<br> Time: {{quest.hours}}:{{quest.minutes}}</td>
+            <td class="w-25" style="vertical-align: middle"><a href="#" v-on:click="doQuest" class="btn btn-primary btn-block">Go</a></td>
           </tr>
         </tbody>
       </table>
@@ -20,10 +20,18 @@
   name: 'Quests',
   data () {
     return {
-      questList: Quests
+      questList: Quests,
+      hero: this.$store.getters.save.hero
+
+    }
+  },
+  methods: {
+    doQuest: function() {
+      this.hero.energy -= 10
     }
   },
   mounted() {
+    console.log(this.questList.quest)
   }
 }
 </script>

@@ -31,7 +31,14 @@ export default {
 </script>
 
 <style>
+header, .menu, .modal-content {
+    background: #97714A;
+    color: #FEFEFE;
 
+}
+.modal-header {
+  border: none;
+}
 .btn-ui {
   background-image: url('./assets/img/ui/buttonLong_brown.png');
   background-repeat: no-repeat;

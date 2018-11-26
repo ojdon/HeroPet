@@ -10,8 +10,6 @@ import BootstrapVue from 'bootstrap-vue'
 import Vuex from 'vuex'
 import VuexPersist from 'vuex-persist';
 
-
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
