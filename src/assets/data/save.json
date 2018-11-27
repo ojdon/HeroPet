@@ -8,6 +8,13 @@
         "health": 100,
         "energy": 100,
         "hunger": 100
+      },
+      "currentQuest": 
+      {
+        "inQuest": false,
+        "id": null,
+        "remainingHours": null,
+        "remainingMins": null
       }
     
 

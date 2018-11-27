@@ -34,6 +34,15 @@ const store = new Vuex.Store({
   },
   getters: {
     save: state => state.save,
+  },
+  mutations: {
+    setEnergy (state, energy) {
+      state.save.hero.energy -= energy
+    },
+    setQuestID (state, id) {
+      state.save.currentQuest.id = id
+      state.save.currentQuest.inQuest = true
+    }
   }
 
 });

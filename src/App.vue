@@ -39,6 +39,10 @@ header, .menu, .modal-content {
 .modal-header {
   border: none;
 }
+.disabled {
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
 .btn-ui {
   background-image: url('./assets/img/ui/buttonLong_brown.png');
   background-repeat: no-repeat;
