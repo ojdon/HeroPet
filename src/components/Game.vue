@@ -5,21 +5,21 @@
   		<b-container fluid>
         <b-row>
         <b-col class="position-relative">
-          <p class="text-center mx-auto mb-0 position-absolute text-header py-2">Health: <span class="d-block d-sm-inline">{{healthCount}}/100</span></p>
+          <p class="text-center mx-auto mb-0 position-absolute text-header py-2" style="background: #97714A">Health: <span class="d-block d-sm-inline">{{healthCount}}/100</span></p>
           <p class="text-left py-2 m-0 position-relative">
             <span class="health position-absolute" v-bind:style="{ width: healthCount + '%' }"></span>
 
           <span class="empty position-absolute"></span></p>
         </b-col>
         <b-col>
-          <p class="text-center mx-auto mb-0 position-absolute text-header py-2">Energy: <span class="d-block d-sm-inline">{{energyCount}}/100</span></p>
+          <p class="text-center mx-auto mb-0 position-absolute text-header py-2" style="background: #97714A">Energy: <span class="d-block d-sm-inline">{{energyCount}}/100</span></p>
           <p class="text-left py-2 m-0 position-relative">
             <span class="energy position-absolute" v-bind:style="{ width: energyCount + '%' }"></span>
           <span class="empty position-absolute"></span>
         </p>
         </b-col>
         <b-col>
-          <p class="text-center mx-auto mb-0 position-absolute text-header py-2">Hunger: <span class="d-block d-sm-inline">{{hungerCount}}/100</span></p>
+          <p class="text-center mx-auto mb-0 position-absolute text-header py-2" style="background: #97714A">Hunger: <span class="d-block d-sm-inline">{{hungerCount}}/100</span></p>
           <p class="text-left py-2 m-0 position-relative">
             <span class="hunger position-absolute" v-bind:style="{ width: hungerCount + '%' }"></span>
 

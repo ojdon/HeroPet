@@ -1,5 +1,8 @@
 <template>
- 	<div v-show="currentQuest.inQuest === false" class="hero male idle"></div>
+ 	<div>
+ 		<div v-if="currentQuest.inQuest === false" class="hero male idle"></div>
+ 		<div v-else class="sign quest"></div>
+ 	</div>
 </template>
 
 <script>
@@ -18,7 +21,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hero {
+.hero, .sign {
 	transform: scale(8);
 	width: 32px;
 	height: 32px;
@@ -43,5 +46,17 @@ export default {
 
 @keyframes idle {
    100% { background-position-x: -320px; background-position-y: 0;}
+}
+
+.sign {
+
+	width:118px !important;
+	height: 119px !important;
+	
+
+}
+
+.sign.quest {
+	background: url(../../assets/img/signQuest.png) left center;
 }
 </style>
