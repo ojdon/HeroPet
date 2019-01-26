@@ -1,5 +1,5 @@
 <template>
- 	<div class="hero male idle"></div>
+ 	<div v-show="currentQuest.inQuest === false" class="hero male idle"></div>
 </template>
 
 <script>
@@ -10,6 +10,7 @@ export default {
     	health: 100,
     	energy: 100,
     	hunger: 100,
+      currentQuest: this.$store.getters.save.currentQuest
     }
   }
 }

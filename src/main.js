@@ -17,6 +17,30 @@ Vue.use(BootstrapVue);
 Vue.use(Vuex)
 
 Vue.config.productionTip = false
+Vue.mixin({
+    timer: function(hr,mm,ss) {
+
+      var interval = setInterval(function(){
+
+            if(hr == 0 && mm == 0 && ss == 0)clearInterval(interval);
+            ss--;
+            if(ss == 0)
+            {
+                ss = 59;
+                mm--;
+                if(mm == 0)
+                {
+                    mm = 59;
+                    hr--;
+                }
+            }
+
+            console.log(hr + ":" + mm);
+
+        },1000)
+
+    }
+})
 
 const vuexLocalStorage = new VuexPersist({
   key: 'vuex', // The key to store the state on in the storage provider.

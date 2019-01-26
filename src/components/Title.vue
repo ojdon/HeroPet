@@ -31,7 +31,7 @@ export default {
       save: false
     }
   },
-  mounted() {  
+  mounted() { 
 
 
     if(localStorage.getItem('save')) {
@@ -86,6 +86,20 @@ h1 {
   100% {
     transform: translateY(0px)
   }
+}
+h1 {
+
+font-family: m6x11;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 10rem;
+color: #FEFEFE;
+  -webkit-text-fill-color: #FEFEFE; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: black;
+  letter-spacing: -10px;
+
 }
 .menu-title a {
   font-size: 48px;

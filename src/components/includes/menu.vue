@@ -39,3 +39,13 @@
     </b-container>
 </b-modal>
 </template>
+<style scoped>
+.menu, .modal-content {
+    background: #97714A !important;
+    color: #FEFEFE;
+
+}
+.modal-header {
+  border: none !important;
+}
+</style>

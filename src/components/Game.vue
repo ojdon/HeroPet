@@ -222,6 +222,14 @@ header .hunger::after {
   background: url(../assets/img/ui/buttonSquare_brown.png) no-repeat;
   background-size: 100% 100%
 }
+header, .menu, .modal-content {
+    background: #97714A !important;
+    color: #FEFEFE;
+
+}
+.modal-header {
+  border: none !important;
+}
 footer {
   bottom: 48px;
   left: 0;
