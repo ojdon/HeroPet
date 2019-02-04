@@ -8,7 +8,8 @@
         "minutes": "10",
         "atk": "0",
         "def": "0",
-        "speed": "0"
+        "speed": "0",
+        "complete": false
       },
       {
         "id": 1,
@@ -18,7 +19,8 @@
         "minutes": "30",
         "atk": "10",
         "def": "10",
-        "speed": "10"
+        "speed": "10",
+        "complete": false
       },
       {
         "id": 2,
@@ -28,7 +30,8 @@
         "minutes": "00",
         "atk": "15",
         "def": "10",
-        "speed": "10"
+        "speed": "10",
+        "complete": false
       }
     ]
 }

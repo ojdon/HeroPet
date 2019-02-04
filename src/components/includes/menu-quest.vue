@@ -7,8 +7,9 @@
           <tr v-for="quest in this.questList.quest">
             <td class="text-left" style="vertical-align: middle"><h5 class="text-uppercase">{{quest.title}}</h5> {{quest.description}}<br> Time: {{quest.hours}}:{{quest.minutes}}</td>
             <td class="w-25" style="vertical-align: middle">
-              <span v-if="currentQuest.inQuest === false && currentQuest.id != quest.id"><a href="#" v-on:click="doQuest(quest.id, quest.hours, quest.minutes)" class="btn btn-secondary btn-block"  >Go</a></span>
-              <span v-else-if="currentQuest.id == quest.id"><a href="#" class="btn btn-warning btn-block disabled" disabled  >In Progress...</a></span>
+              <span v-if="currentQuest.inQuest === false && currentQuest.id != quest.id && quest.complete === false"><a href="#" v-on:click="doQuest(quest.id, quest.hours, quest.minutes)" class="btn btn-secondary btn-block"  >Go</a></span>
+              <span v-else-if="currentQuest.id == quest.id && currentQuest.inQuest === true"><a href="#" class="btn btn-warning btn-block disabled" disabled  >In Progress...</a></span>
+              <span v-else-if="quest.complete === true"><a href="#" class="btn btn-success btn-block disabled" disabled  >Completed</a></span>
               <span v-else ><a href="#" class="btn btn-danger btn-block disabled" disabled >On quest...</a></span>
             </td>
           </tr>
@@ -56,6 +57,9 @@
       clearInterval(this.timer);
       this.timer = null;
       this.resetButton = false;
+      this.questList.quest[this.currentQuest.id].complete = true;
+      this.currentQuest.inQuest = false;
+      this.currentQuest.id = null;
     },
     padTime: function(time) {
       return (time < 10 ? '0' : '') + time;
