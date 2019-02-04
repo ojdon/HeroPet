@@ -2,25 +2,25 @@
 	
   <div class="game">
   	<header>
-  		<b-container fluid>
-        <b-row>
-        <b-col class="position-relative">
-          <p class="text-center mx-auto mb-0 position-absolute text-header py-2" style="background: #97714A">Health: <span class="d-block d-sm-inline">{{healthCount}}/100</span></p>
-          <p class="text-left py-2 m-0 position-relative">
+  		<b-container fluid class="align-items-center d-flex flex-row " style="min-height: 3rem; justify-content: space-between;">
+        <b-row class="w-100">
+        <b-col>
+          <p class="text-center mx-auto mb-0 position-absolute text-header">Health: <span class="d-block d-sm-inline">{{healthCount}}/100</span></p>
+          <p class="text-left m-0 position-relative">
             <span class="health position-absolute" v-bind:style="{ width: healthCount + '%' }"></span>
 
           <span class="empty position-absolute"></span></p>
         </b-col>
         <b-col>
-          <p class="text-center mx-auto mb-0 position-absolute text-header py-2" style="background: #97714A">Energy: <span class="d-block d-sm-inline">{{energyCount}}/100</span></p>
-          <p class="text-left py-2 m-0 position-relative">
+          <p class="text-center mx-auto mb-0 position-absolute text-header">Energy: <span class="d-block d-sm-inline">{{energyCount}}/100</span></p>
+          <p class="text-left m-0 position-relative">
             <span class="energy position-absolute" v-bind:style="{ width: energyCount + '%' }"></span>
           <span class="empty position-absolute"></span>
         </p>
         </b-col>
         <b-col>
-          <p class="text-center mx-auto mb-0 position-absolute text-header py-2" style="background: #97714A">Hunger: <span class="d-block d-sm-inline">{{hungerCount}}/100</span></p>
-          <p class="text-left py-2 m-0 position-relative">
+          <p class="text-center mx-auto mb-0 position-absolute text-header">Hunger: <span class="d-block d-sm-inline">{{hungerCount}}/100</span></p>
+          <p class="text-left m-0 position-relative">
             <span class="hunger position-absolute" v-bind:style="{ width: hungerCount + '%' }"></span>
 
           <span class="empty position-absolute"></span>
@@ -62,7 +62,7 @@ export default {
     return {
       msg: 'Game Screen',
       player: Player,
-      hero: this.$store.getters.save.hero
+      hero: null
     }
   },
   computed: {
@@ -78,6 +78,13 @@ export default {
   },
   methods: {
     init: function () {
+      console.log(this.$route.params.new);
+      if( this.$route.params.new === true) {
+        localStorage.clear();
+      }
+      if(this.$store.getters.save.hero) {
+        this.hero = this.$store.getters.save.hero;
+      }
       localStorage.setItem('save', true);
     }
   },

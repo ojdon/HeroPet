@@ -21,7 +21,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hero, .sign {
+.hero {
 	transform: scale(8);
 	width: 32px;
 	height: 32px;
@@ -52,7 +52,14 @@ export default {
 
 	width:118px !important;
 	height: 119px !important;
-	
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 50vh;
+	left: 0;
+	right: 25vh;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 

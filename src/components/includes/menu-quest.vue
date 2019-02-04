@@ -26,7 +26,10 @@
     return {
       questList: Quests,
       hero: this.$store.getters.save.hero,
-      currentQuest: this.$store.getters.save.currentQuest
+      currentQuest: this.$store.getters.save.currentQuest,
+      timer: null,
+      totalTime: (5 * 60),
+      resetButton: false
 
     }
   },
@@ -35,7 +38,46 @@
       //this.hero.energy -= 10;
       this.$store.commit('setEnergy', 10);
       this.$store.commit('setQuestID', id);
-      timer(hours, minutes, 0)
+      //this.timer(hours, minutes, 0);
+      this.totalTime = (hours, minutes);
+      this.startTimer();
+    },
+    startTimer: function() {
+      this.timer = setInterval(() => this.countdown(), 1000);
+      this.resetButton = true;
+    },
+    stopTimer: function() {
+      clearInterval(this.timer);
+      this.timer = null;
+      this.resetButton = true;
+    },
+    resetTimer: function() {
+      this.totalTime = (5 * 60);
+      clearInterval(this.timer);
+      this.timer = null;
+      this.resetButton = false;
+    },
+    padTime: function(time) {
+      return (time < 10 ? '0' : '') + time;
+    },
+    countdown: function() {
+      if(this.totalTime >= 1){
+        this.totalTime--;
+      } else{
+        this.totalTime = 0;
+        this.resetTimer()
+      }
+      console.log(this.totalTime);
+    }
+  },
+  computed: {
+    minutes: function() {
+      const minutes = Math.floor(this.totalTime / 60);
+      return this.padTime(minutes);
+    },
+    seconds: function() {
+      const seconds = this.totalTime - (this.minutes * 60);
+      return this.padTime(seconds);
     }
   },
   mounted() {

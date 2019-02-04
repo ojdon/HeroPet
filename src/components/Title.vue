@@ -5,7 +5,7 @@
 
      <b-row>
       <b-col cols="4" offset="4" class="my-5">
-        <b-button class="btn btn-ui" block=true size="lg" to="/game">New Game</b-button>
+        <b-button class="btn btn-ui" block=true size="lg" :to="{name: 'Game', params: {new: true}}" >New Game</b-button>
 
         <b-button v-show="save" class="btn btn-ui" block=true size="lg" to="/game">Continue Game</b-button>
         <b-button class="btn btn-ui" block=true size="lg" href="">Exit Game</b-button>
@@ -32,11 +32,13 @@ export default {
     }
   },
   mounted() { 
-
-
     if(localStorage.getItem('save')) {
       this.save = localStorage.getItem('save');
     }
+    console.log(this.$router);
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log(this.from);
   }
 }
 </script>
